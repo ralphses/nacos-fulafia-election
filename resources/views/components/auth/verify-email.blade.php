@@ -15,7 +15,6 @@
 
                     </div>
                     <div class="block-content">
-{{--                        @if (session('status') == 'verification-link-sent')--}}
                             <div class="p-sm-3 px-lg-4 px-xxl-5 py-lg-5">
                             <h1 class="h2 mb-1">NACOS</h1>
                             <p class="fw-medium text-muted">

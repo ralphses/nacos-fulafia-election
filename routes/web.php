@@ -3,6 +3,7 @@
 use App\Http\Controllers\CandidatesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\VotersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,7 +47,41 @@ Route::prefix('dashboard')->group(function () {
             ->name('candidate.status');
 
     });
+
+    Route::prefix('/voters')->group(function () {
+
+        Route::get('/', [VotersController::class, 'index'])
+            ->name('voters.all');
+
+        Route::get('/add', [VotersController::class, 'create'])
+            ->name('voters.add');
+
+        Route::get('/view/{id}', [VotersController::class, 'show'])
+            ->name('voters.view');
+
+        Route::post('/add', [VotersController::class, 'store'])
+            ->name('voters.store');
+    });
+
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::prefix('voters')->group(function () {
+
+    Route::get('/authenticate', [VotersController::class, 'authenticate'])
+        ->name('voters.authenticate');
+
+    Route::post('/authenticate', [VotersController::class, 'save'])
+        ->name('voters.save');
+
+    Route::get('/authenticate/success', [VotersController::class, 'success'])
+        ->name('voters.authenticate-success');
+
+    Route::get('/vote', [VotersController::class, 'vote'])
+        ->name('voters.vote');
+
+    Route::get('/vote/start', [VotersController::class, 'voteStart'])
+        ->name('voters.vote.start');
+});
 
 
 
