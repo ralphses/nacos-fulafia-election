@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('candidates', function (Blueprint $table) {
 
             $table->id();
+            $table->unsignedBigInteger('election_id');
 
             $table->string('fullname');
             $table->string('matric');
@@ -28,6 +29,8 @@ return new class extends Migration
             $table->unsignedInteger('total_votes')->default(0);
 
             $table->boolean('screened')->default(true);
+
+            $table->foreign('election_id')->references('id')->on('elections')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->timestamps();
 

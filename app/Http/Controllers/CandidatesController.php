@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\NewCandidateRequest;
 use App\Models\Candidates;
+use App\Models\Election;
 use App\Utils\Utility;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
@@ -17,11 +18,19 @@ class CandidatesController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
      */
-    public function index(): Response
+    public function index()
     {
-        return response()->view('dashboard.candidates.all', ['candidates' => Candidates::all()]);
+        $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
+            ->orWhere('status', Utility::ELECTION_STATUS['on'])
+            ->orderBy('date', 'desc')
+            ->first();
+
+        if(is_null($readyElection)) {
+            return response()->redirectTo(route('dashboard'))->with('dashboard', 'Start election first');
+        }
+
+        return response()->view('dashboard.candidates.all', ['candidates' => Candidates::where('election_id', $readyElection->id)->get()]);
     }
 
     /**
@@ -52,6 +61,7 @@ class CandidatesController extends Controller
             'level' => $request->get('candidate-level'),
             'screened' => $request->get('candidate-screened') == "1",
             'image_path' => $this->storeImage($request),
+            'election_id' => Election::where('status', Utility::ELECTION_STATUS['start'])->first()->id,
         ]);
 
         return response()->redirectTo(route('candidates.add'))->with('candidates', "Candidate saved!");

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('voters', function (Blueprint $table) {
 
             $table->id();
+            $table->unsignedBigInteger('election_id');
 
             $table->string('matric');
             $table->string('name')->nullable(true);
@@ -23,6 +24,8 @@ return new class extends Migration
             $table->string('voter_id')->nullable(true);
 
             $table->boolean('voted')->default(false);
+
+            $table->foreign('election_id')->references('id')->on('elections')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->timestamps();
 

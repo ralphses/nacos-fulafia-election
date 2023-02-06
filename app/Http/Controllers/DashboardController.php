@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Election;
+use App\Utils\Utility;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -15,6 +17,18 @@ class DashboardController extends Controller
      */
     public function index(): Response
     {
-        return response()->view('dashboard.dashboard');
+
+        $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
+            ->orWhere('status', Utility::ELECTION_STATUS['on'])
+            ->orderBy('date', 'desc')
+            ->first();
+
+        return response()->view('dashboard.dashboard', ['info' => [
+            'ready' => $readyElection->status ?? 'NEW'
+        ]]);
+    }
+
+    public function setElectionDate() {
+//        return response()->view();
     }
 }

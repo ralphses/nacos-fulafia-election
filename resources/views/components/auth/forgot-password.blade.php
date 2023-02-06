@@ -15,7 +15,8 @@
                     </div>
                     <div class="block-content">
                         <div class="p-sm-3 px-lg-4 px-xxl-5 py-lg-5">
-                            <h1 class="h2 mb-1">NACOS</h1>
+                            <h1 class="h2 mb-1" style="color: #198906">NACOS Elections</h1>
+
                             <p class="fw-medium text-muted">
                                 Please provide your account’s email or username and we will send you your password.
                             </p>
@@ -29,11 +30,15 @@
 
                                 <div class="mb-4">
                                     <input type="text" class="form-control form-control-lg form-control-alt" id="reminder-credential" name="email" placeholder="Email address">
+
+                                    @if($errors->any('email'))
+                                        <p style="color: red; font-size: medium">{{ $errors->first('email') }}</p>
+                                    @endif
                                 </div>
                                 <div class="row mb-4">
                                     <div class="col-md-6 col-xl-5">
-                                        <button type="submit" class="btn w-100 btn-alt-primary">
-                                            <i class="fa fa-fw fa-envelope me-1 opacity-50"></i> Send Mail
+                                        <button type="submit" class="btn w-100 btn-alt-success text-white" style="background-color: #198906">
+                                            Send Mail
                                         </button>
                                     </div>
                                 </div>

@@ -14,10 +14,7 @@
                     </div>
                     <div class="block-content">
                         <div class="p-sm-3 px-lg-4 px-xxl-5 py-lg-5">
-                            <h1 class="h2 mb-1">OneUI</h1>
-                            <p class="fw-medium text-muted">
-                                Welcome, please login.
-                            </p>
+                            <h1 class="h2 mb-1" style="color: #198906">NACOS Elections</h1>
 
                             <!-- Sign In Form -->
                             <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
@@ -48,8 +45,8 @@
                                 </div>
                                 <div class="row mb-4">
                                     <div class="col-md-6 col-xl-5">
-                                        <button type="submit" class="btn w-100 btn-alt-primary">
-                                            <i class="fa fa-fw fa-sign-in-alt me-1 opacity-50"></i> Sign In
+                                        <button type="submit" class="btn w-100 btn-alt-success text-white" style="background-color: #198906">
+                                            Sign In
                                         </button>
                                     </div>
                                 </div>

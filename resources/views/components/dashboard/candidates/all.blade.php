@@ -49,7 +49,6 @@
                             <th style="width: 25%;">Name</th>
                             <th style="width: 15%;">Matric</th>
                             <th style="width: 20%;">Position</th>
-                            <th style="width: 10%;">Total votes</th>
                             <th style="width: 10%;">Status</th>
                             <th style="width: 15%;">Actions</th>
 
@@ -74,9 +73,6 @@
                                     {{ $candidate->position }}
                                 </td>
 
-                                <td class="fw-semibold fs-sm">
-                                    {{ $candidate->total_votes }}
-                                </td>
                                 <td class="fs-sm">
                                     @if($candidate->active)
                                         <span class="fs-xs fw-semibold d-inline-block py-1 px-3 rounded-pill bg-success-light text-black">Qualified</span>

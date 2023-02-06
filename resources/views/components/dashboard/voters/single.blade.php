@@ -18,11 +18,6 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label" for="example-ltf-email">Voter's ID</label>
-                        <h5>{{ $voter->voter_id ?? "------------" }}</h5>
-                    </div>
-
-                    <div class="mb-4">
                         <label class="form-label" for="example-ltf-email">Full Name</label>
                         <h5>{{ $voter->name ?? "------------" }}</h5>
                     </div>

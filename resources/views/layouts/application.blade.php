@@ -27,7 +27,7 @@
     <!-- Icons -->
     <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
     <!-- Icons -->
-    <link rel="shortcut icon" href="{{ asset('media/favicons/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('media/favicons/favicon.ico') }}">
     <link rel="icon" sizes="192x192" type="image/png" href="{{ asset('media/favicons/favicon-192x192.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicons/apple-touch-icon-180x180.png') }}">
 
@@ -36,8 +36,8 @@
 
     <!-- Stylesheets -->
     <!-- OneUI framework -->
-    <link rel="stylesheet" href={{ asset("js/plugins/select2/css/select2.min.css") }}>
-    <link rel="stylesheet" id="css-main" href={{ asset("css/oneui.min.css") }}>
+    <link rel="stylesheet" href={{ asset("assets/js/plugins/select2/css/select2.min.css") }}>
+    <link rel="stylesheet" id="css-main" href={{ asset("assets/css/oneui.min.css") }}>
 
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/amethyst.min.css"> -->
@@ -55,6 +55,7 @@
 {{--<script src="/assets/"></script>--}}
 <script src="{{ asset("assets/js/oneui.app.min.js") }}"></script>
 <script src="{{ asset("assets/js/lib/jquery.min.js") }}"></script>
+<script src="{{ asset('/assets/js/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset("assets/js/plugins/select2/js/select2.full.min.js") }}"></script>
 <script src="{{ asset("assets/js/plugins/jquery-validation/jquery.validate.min.js") }}"></script>
 <script src="{{ asset("assets/js/plugins/jquery-validation/additional-methods.js") }}"></script>

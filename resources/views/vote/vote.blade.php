@@ -1,8 +1,8 @@
-@extends('layouts.application-guest')
+@extends('layouts.landing')
 
 @section('content')
 
-    @component('components.vote.vote')
+    @component('components.vote.vote', ['candidates' => $candidates, 'voterId' => $voterId])
     @endcomponent
 
 @endsection

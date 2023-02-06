@@ -10,23 +10,16 @@
                         <div class="p-sm-3 px-lg-4 px-xxl-5 py-lg-5">
                             <h1 class="h2 mb-1">NACOS 2023</h1>
                             <p class="fw-medium text-muted">
-                               Kindly and securely store the Voter Identification Number below:
+                              Your VIN was generated successfully <br>It will be sent to your email very soon
                             </p>
 
                                 <div class="row mb-4">
                                     <div class="col-md-6 col-xl-10">
-                                        <div class="btn w-100 btn-alt-primary">
-                                            <h3>{{ $voterId }}</h3>
+                                        <div class="btn">
+                                           <a href="{{ route('welcome') }}"> <button class="btn btn-success">Back to Home</button></a>
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-                    </div>
-                    <div class="block-header block-header-default">
-                        <div class="block-options">
-                            <a class="btn-block-option" href="{{ route('voters.vote', ['voterId' => $voterId]) }}" data-bs-toggle="tooltip" data-bs-placement="left" title="Vote Now">
-                                Vote Now <i class="fa fa-sign-in-alt"></i>
-                            </a>
                         </div>
                     </div>
                 </div>

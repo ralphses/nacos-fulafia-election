@@ -7,7 +7,7 @@
                 <div class="block block-rounded mb-0">
                     <div class="block-content">
                         <div class="p-sm-3 px-lg-4 px-xxl-5 py-lg-5">
-                            <h1 class="h2 mb-1">NACOS 2023</h1>
+                            <h1 class="h2 mb-1" style="color: #198906">NACOS Elections</h1>
                             <p class="fw-medium text-muted">
                                 Please carefully enter <strong>Voter Identity Number (VIN).</strong>
                             </p>
@@ -21,7 +21,7 @@
 
                                 <div class="py-3">
                                     <div class="mb-4">
-                                        <input type="text" class="form-control form-control-lg form-control-alt" id="signup-username" name="voterId" placeholder="Voter Identification Number">
+                                        <input type="text" value="{{ $voterId ?? old('voterId') }}" class="form-control form-control-lg form-control-alt" id="signup-username" name="voterId" placeholder="Voter Identification Number">
 
                                         @if($errors->any('voterId'))
                                             <p style="color: red; font-size: medium">{{ $errors->first('voterId') }}</p>
@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="row mb-4">
                                     <div class="col-md-6 col-xl-5">
-                                        <button type="submit" class="btn w-100 btn-alt-success">
+                                        <button type="submit" class="btn w-100 btn-alt-success text-white" style="background-color: #198906">
                                             Proceed
                                         </button>
                                     </div>

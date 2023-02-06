@@ -5,7 +5,7 @@
     @component('components.dashboard.partials.nav-bar')
     @endcomponent
 
-    @component('components.dashboard.dashboard')
+    @component('components.dashboard.dashboard', ['info' => $info])
     @endcomponent
 
     @component('components.dashboard.partials.footer')

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @component('components.auth.voter.authentication-success', ['voterId' => $voterId])
+    @component('components.auth.voter.authentication-success')
     @endcomponent
 
 @endsection

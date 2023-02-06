@@ -46,7 +46,6 @@
                         <thead>
                         <tr>
                             <th class="text-center" style="width: 10%;">S/N</th>
-                            <th style="width: 25%;">Voter ID</th>
                             <th style="width: 15%;">Matric</th>
                             <th style="width: 20%;">Name</th>
                             <th style="width: 10%;">Email</th>
@@ -61,9 +60,6 @@
                             <tr>
                                 <td class="text-center">
                                     {{ ++$loop->index }}
-                                </td>
-                                <td class="fw-semibold fs-sm">
-                                    {{ $voter->voter_id }}
                                 </td>
 
                                 <td class="fw-semibold fs-sm">

@@ -44,10 +44,34 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="">
+                    <a class="nav-main-link" href="{{ route('election.all') }}">
                         <i class="nav-main-link-icon si si-speedometer"></i>
-                        <span class="nav-main-link-name">School Profile</span>
+                        <span class="nav-main-link-name">Elections</span>
                     </a>
+                </li>
+
+                <li class="nav-main-item">
+                    <a class="nav-main-link" href="{{ route('candidates.all') }}">
+                        <i class="nav-main-link-icon si si-speedometer"></i>
+                        <span class="nav-main-link-name">Candidates</span>
+                    </a>
+                </li>
+
+                <li class="nav-main-item">
+                    <a class="nav-main-link" href="{{ route('voters.all') }}">
+                        <i class="nav-main-link-icon si si-speedometer"></i>
+                        <span class="nav-main-link-name">Registered Voters</span>
+                    </a>
+                </li>
+
+                <li class="nav-main-item">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" style="background-color: transparent; border-color: transparent" class="nav-main-link">
+                            LOGOUT
+                        </button>
+                    </form>
+
                 </li>
 
 

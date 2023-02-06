@@ -10,6 +10,7 @@ class Candidates extends Model
     use HasFactory;
 
     protected $fillable = [
+        'election_id',
         'fullname',
         'matric',
         'department',

@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\CandidatesController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ElectionController;
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\VotersController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,11 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SiteController::class, 'welcome'])->name('welcome');
 
-Route::prefix('dashboard')->group(function () {
+Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/', [DashboardController::class, 'index'])
         ->name('dashboard');
@@ -63,7 +62,43 @@ Route::prefix('dashboard')->group(function () {
             ->name('voters.store');
     });
 
-})->middleware(['auth', 'verified'])->name('dashboard');
+    Route::prefix('/elections')->group(function () {
+
+        Route::get('/', [ElectionController::class, 'index'])
+            ->name('election.all');
+
+        Route::get('/add', [ElectionController::class, 'create'])
+            ->name('election.add');
+
+        Route::post('/add', [ElectionController::class, 'store'])
+            ->name('election.store');
+
+        Route::post('/view/{id}', [ElectionController::class, 'show'])
+            ->name('election.view');
+
+        Route::delete('/remove/{id}', [ElectionController::class, 'destroy'])
+            ->name('election.remove');
+
+        Route::patch('/update/{id}', [ElectionController::class, 'update'])
+            ->name('election.update');
+
+        Route::post('/status', [ElectionController::class, 'status'])
+            ->name('election.status');
+
+        Route::get('/stop', [ElectionController::class, 'stop'])
+            ->name('election.stop');
+
+        Route::get('/results', [ElectionController::class, 'electionResults'])
+            ->name('elections.result');
+    });
+
+    Route::prefix('positions')->group(function () {
+
+        Route::get('/', [ElectionController::class, 'positions'])
+            ->name('positions.all');
+    });
+
+});
 
 Route::prefix('voters')->group(function () {
 
@@ -79,18 +114,11 @@ Route::prefix('voters')->group(function () {
     Route::get('/vote', [VotersController::class, 'vote'])
         ->name('voters.vote');
 
+    Route::post('/vote', [VotersController::class, 'castVote'])
+        ->name('voters.vote.store');
+
     Route::get('/vote/start', [VotersController::class, 'voteStart'])
         ->name('voters.vote.start');
-});
-
-
-
-Route::view('/test', 'authentication.verify-email');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';
