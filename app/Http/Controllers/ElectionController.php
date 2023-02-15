@@ -136,7 +136,7 @@ class ElectionController extends Controller
                 $decrypt = Crypt::decrypt($voter->voter_id);
                 $url = route('voters.vote', ['voterId' => $decrypt]);
 
-                Mail::to($voter->email)->send(new VinEmail($url, $decrypt, $voter->name, $election->stop_time));
+                Mail::to(strtolower($voter->email))->send(new VinEmail($url, $decrypt, $voter->name, $election->stop_time));
             }
         }
     }
