@@ -44,7 +44,6 @@ Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () 
 
         Route::patch('/status/{id}', [CandidatesController::class, 'status'])
             ->name('candidate.status');
-
     });
 
     Route::prefix('/voters')->group(function () {
@@ -88,7 +87,10 @@ Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () 
         Route::get('/stop', [ElectionController::class, 'stop'])
             ->name('election.stop');
 
-        Route::get('/results', [ElectionController::class, 'electionResults'])
+        Route::get('/results', [ElectionController::class, 'results'])
+            ->name('result.select.election');
+
+        Route::post('/results', [ElectionController::class, 'electionResults'])
             ->name('elections.result');
     });
 

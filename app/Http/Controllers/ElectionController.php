@@ -8,6 +8,9 @@ use App\Models\Candidates;
 use App\Models\Election;
 use App\Models\Voters;
 use App\Utils\Utility;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -31,7 +34,7 @@ class ElectionController extends Controller
      * Show the form for creating a new resource.
      *
      */
-    public function create()
+    public function create(): Response|RedirectResponse
     {
         $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
             ->orWhere('status', Utility::ELECTION_STATUS['on'])
@@ -39,7 +42,7 @@ class ElectionController extends Controller
             ->first();
 
         if(!is_null($readyElection)) {
-            return redirect()->back()->with('elections', 'An election is started or ongoing');
+            return redirect()->back()->with('elections-error', 'Error! Stop created or ongoing election');
         }
 
         return response()->view('dashboard.election.add');
@@ -86,6 +89,10 @@ class ElectionController extends Controller
         return response()->redirectTo(route('election.all'));
     }
 
+    /**
+     * @param Request $request
+     * @return RedirectResponse|void
+     */
     public function status (Request $request) {
 
         $request->validate(['action' => ['required', Rule::in(array_values(Utility::ELECTION_STATUS))]]);
@@ -120,18 +127,22 @@ class ElectionController extends Controller
 
     private function sendVinToVoters($election)
     {
-        $voters = Voters::where('election_id', $election->id)->get();
+        $voters = Voters::where('election_id', $election->id)
+            ->get();
 
         foreach ($voters as $voter) {
 
-            $decrypt = Crypt::decrypt($voter->voter_id);
-            $url = route('voters.vote', ['voterId' => $decrypt]);
+            if($voter->voter_id AND $voter->email) {
+                $decrypt = Crypt::decrypt($voter->voter_id);
+                $url = route('voters.vote', ['voterId' => $decrypt]);
 
-            Mail::to($voter->email)->send(new VinEmail($url, $decrypt, $voter->name, $election->stop_time));
+                Mail::to($voter->email)->send(new VinEmail($url, $decrypt, $voter->name, $election->stop_time));
+            }
         }
     }
 
-    public function positions() {
+    public function positions(): Factory|View|Application
+    {
 
         $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
             ->orWhere('status', Utility::ELECTION_STATUS['on'])
@@ -150,20 +161,45 @@ class ElectionController extends Controller
         return view('dashboard.positions.all', ['positions' => $positions]);
     }
 
-    public function electionResults(): Response|RedirectResponse
+    public function results(): Response|RedirectResponse
     {
-
-        $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
-            ->orWhere('status', Utility::ELECTION_STATUS['on'])
+        $ongoingElection = Election::where('status', Utility::ELECTION_STATUS['on'])
             ->orderBy('date', 'desc')
             ->first();
 
-        if(is_null($readyElection)) {
-            return response()->redirectTo(route('dashboard'))->with('dashboard', 'Start election first');
+        if($ongoingElection) {
+
+            $allCandidates = Candidates::where('active', 1)
+                ->where('election_id', $ongoingElection->id)
+                ->orderBy('position', 'asc')
+                ->orderBy('total_votes', 'desc')
+                ->get();
+
+            return response()->view('dashboard.election.result', ['candidates' => $allCandidates]);
         }
 
+        $elections = Election::where('status', Utility::ELECTION_STATUS['stop'])
+            ->orderBy('date', 'desc')
+            ->get();
+
+        if($elections->count() < 1) {
+            return redirect()->back()->with('dashboard', 'No Election available');
+        }
+
+        return response()->view('dashboard.election.select', ['elections' => $elections]);
+
+    }
+
+    public function electionResults(Request $request): Response|RedirectResponse
+    {
+
+        $request->validate(['election' => ['required', Rule::exists('elections', 'id')]]);
+
+        $election = Election::find($request->get('election'));
+
+
         $allCandidates = Candidates::where('active', 1)
-            ->where('election_id', $readyElection->id)
+            ->where('election_id', $election->id)
             ->orderBy('position', 'asc')
             ->orderBy('total_votes', 'desc')
             ->get();

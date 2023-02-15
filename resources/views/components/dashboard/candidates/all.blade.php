@@ -16,7 +16,18 @@
                     <nav class="flex-shrink-0 mt-3 mt-sm-0 ms-sm-3" aria-label="breadcrumb">
                         <div class="alert alert-secondary alert-dismissible alert-success" role="alert">
                             <p class="mb-0">
-                                {{ session()->get('candidates') }} <a class="alert-link" href="{{ route('dashboard') }}">OK</a>!
+                                {{ session()->get('candidates') }}
+                            </p>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </nav>
+                @endif
+
+                @if(session('candidates-error'))
+                    <nav class="flex-shrink-0 mt-3 mt-sm-0 ms-sm-3" aria-label="breadcrumb">
+                        <div class="alert alert-secondary alert-dismissible alert-danger" role="alert">
+                            <p class="mb-0">
+                                {{ session()->get('candidates-error') }}
                             </p>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>

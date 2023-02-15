@@ -35,6 +35,7 @@
     <!-- Sidebar Scrolling -->
     <div class="js-sidebar-scroll">
         <!-- Side Navigation -->
+
         <div class="content-side">
             <ul class="nav-main">
                 <li class="nav-main-item">
@@ -83,3 +84,38 @@
     <!-- END Sidebar Scrolling -->
 </nav>
 <!-- END Sidebar -->
+
+<header id="page-header">
+    <!-- Header Content -->
+    <div class="content-header">
+        <!-- Left Section -->
+        <div class="d-flex align-items-center">
+            <!-- Toggle Sidebar -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+            <button type="button" class="btn btn-sm btn-alt-secondary me-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <!-- END Toggle Sidebar -->
+
+
+
+            <!-- END Search Form -->
+        </div>
+        <!-- END Left Section -->
+
+        <!-- END Right Section -->
+    </div>
+    <!-- END Header Content -->
+
+
+    <!-- Header Loader -->
+    <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+    <div id="page-header-loader" class="overlay-header bg-body-extra-light">
+        <div class="content-header">
+            <div class="w-100 text-center">
+                <i class="fa fa-fw fa-circle-notch fa-spin"></i>
+            </div>
+        </div>
+    </div>
+    <!-- END Header Loader -->
+</header>

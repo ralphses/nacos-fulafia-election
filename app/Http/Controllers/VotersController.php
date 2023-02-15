@@ -25,7 +25,7 @@ class VotersController extends Controller
      * Display a listing of the resource.
      *
      */
-    public function index()
+    public function index(): Response|RedirectResponse
     {
         $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
             ->orWhere('status', Utility::ELECTION_STATUS['on'])
@@ -42,10 +42,18 @@ class VotersController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return RedirectResponse|Response
      */
-    public function create(): Response
+    public function create(): Response|RedirectResponse
     {
+        $readyElection = Election::where('status', Utility::ELECTION_STATUS['on'])
+            ->orderBy('date', 'desc')
+            ->first();
+
+        if($readyElection) {
+            return redirect()->back()->with('voters-error', 'Election ongoing, cannot add voters at this time');
+        }
+
         return response()->view('dashboard.voters.add');
     }
 
@@ -57,14 +65,20 @@ class VotersController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        $request->validate(['voter-matric' => ['required']]);
+
         $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
             ->orderBy('date', 'desc')
             ->first();
 
-        $request->validate(['voter-matric' => ['required', Rule::unique('voters', 'matric')]]);
+        $voterMatric = $request->get('voter-matric');
+
+        if(Voters::where('election_id', $readyElection->id)->where('matric', $voterMatric)->first()) {
+            return redirect()->back()->withInput()->withErrors(['voter-matric' => 'Matric already added for current election']);
+        }
 
         Voters::create([
-            'matric' => $request->get('voter-matric'),
+            'matric' => $voterMatric,
             'election_id' => $readyElection->id
         ]);
 
@@ -96,13 +110,23 @@ class VotersController extends Controller
      * Update the specified resource in storage.
      *
      * @param NewVoterAuthenticationRequest $request
-     * @return Application|Factory|View
+     * @return Application|Factory|View|RedirectResponse
      */
-    public function save(NewVoterAuthenticationRequest $request): Application|Factory|View
+    public function save(NewVoterAuthenticationRequest $request): View|Factory|RedirectResponse|Application
     {
         $request->validated();
 
-        $voter = Voters::where('matric', $request->get('matric'))->first();
+        $currentElection = Election::where('status', Utility::ELECTION_STATUS['start'])
+            ->orderBy('date', 'desc')
+            ->first();
+
+        $voter = Voters::where('matric', $request->get('matric'))
+            ->where('election_id', $currentElection->id)
+            ->first();
+
+        if($voter->email OR $voter->name OR $voter->voter_id) {
+            return redirect()->back()->withErrors(['matric' => 'This matric number already authenticated!']);
+        }
 
         $voter->update([
             'name' => $request->get('name'),
@@ -136,9 +160,11 @@ class VotersController extends Controller
 
         }
 
-        $voter = Voters::where('election_id', $readyElection->id)->get()->filter(function ($value) use ($voterId) {
-            $id = Crypt::decrypt($value->voter_id);
-            return $voterId == $id;
+        $voter = Voters::where('election_id', $readyElection->id)->get()
+            ->filter(function ($v) { return !is_null($v->voter_id); })
+            ->filter(function ($value) use ($voterId) {
+                $id = Crypt::decrypt($value->voter_id);
+                return $voterId == $id;
         })->first();
 
         if(is_null($voter)) {
@@ -158,10 +184,19 @@ class VotersController extends Controller
     }
 
     /**
-     * @return Factory|View|Application
+     * @return Application|Factory|View|RedirectResponse
      */
-    public function voteStart(): Factory|View|Application
+    public function voteStart(): View|Factory|RedirectResponse|Application
     {
+
+        $readyElection = Election::where('status', Utility::ELECTION_STATUS['on'])
+            ->orderBy('date', 'desc')
+            ->first();
+
+        if(is_null($readyElection)) {
+            return response()->redirectTo(route('voters.authenticate'))->with('start', 'Not available');
+        }
+
         return view('auth.voter.start');
     }
 
@@ -198,8 +233,9 @@ class VotersController extends Controller
 
         $voter = $request->get('voter');
 
-
         foreach (Utility::POSITIONS as $position) {
+
+            $position = str_replace(' ', '_', $position);
 
             $candidateId = $request->get($position);
 
@@ -209,7 +245,9 @@ class VotersController extends Controller
             }
         }
 
-        $thisVoter = Voters::all()->filter(function ($v) use ($voter) {
+        $thisVoter = Voters::all()
+            ->filter(function ($v) { return !is_null($v->voter_id); })
+            ->filter(function ($v) use ($voter) {
             $id = Crypt::decrypt($v->voter_id);
             return $voter === $id;
 

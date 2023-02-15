@@ -7,11 +7,6 @@
                 <div class="block block-rounded mb-0">
                     <div class="block-header block-header-default" style="background-color: #daf8d5">
                         <h3 class="block-title">AUthenticate Voter</h3>
-                        <div class="block-options">
-                            <a class="btn-block-option" href="{{ route('voters.vote.start') }}" data-bs-toggle="tooltip" data-bs-placement="left" title="Vote Now">
-                                Vote Now <i class="fa fa-sign-in-alt"></i>
-                            </a>
-                        </div>
                     </div>
                     <div class="block-content">
                         <div class="p-sm-3 px-lg-4 px-xxl-5 py-lg-5">

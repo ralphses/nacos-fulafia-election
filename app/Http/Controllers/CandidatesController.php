@@ -19,7 +19,7 @@ class CandidatesController extends Controller
      * Display a listing of the resource.
      *
      */
-    public function index()
+    public function index(): Response|RedirectResponse
     {
         $readyElection = Election::where('status', Utility::ELECTION_STATUS['start'])
             ->orWhere('status', Utility::ELECTION_STATUS['on'])
@@ -36,10 +36,17 @@ class CandidatesController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return RedirectResponse|Response
      */
-    public function create(): Response
+    public function create(): Response|RedirectResponse
     {
+
+        $ongoingElection = Election::where('status', Utility::ELECTION_STATUS['on'])->first();
+
+        if($ongoingElection) {
+            return redirect()->back()->with('candidates-error', 'Election ongoing, cannot add candidate at this time');
+        }
+
         return response()->view('dashboard.candidates.add');
 
     }
@@ -54,6 +61,16 @@ class CandidatesController extends Controller
     {
         $request->validated();
 
+        $election = Election::where('status', Utility::ELECTION_STATUS['start'])->first();
+
+        $addedCandidate = Candidates::where('election_id', $election->id)
+            ->where('matric', $request->get('candidate-matric'))
+            ->first();
+
+        if($addedCandidate) {
+            return redirect()->back()->withInput()->withErrors(['candidate-name' => 'Candidate with name or matric already added for this election']);
+        }
+
         Candidates::create([
             'fullname' => $request->get('candidate-name'),
             'matric' => $request->get('candidate-matric'),
@@ -61,7 +78,7 @@ class CandidatesController extends Controller
             'level' => $request->get('candidate-level'),
             'screened' => $request->get('candidate-screened') == "1",
             'image_path' => $this->storeImage($request),
-            'election_id' => Election::where('status', Utility::ELECTION_STATUS['start'])->first()->id,
+            'election_id' => $election->id,
         ]);
 
         return response()->redirectTo(route('candidates.add'))->with('candidates', "Candidate saved!");

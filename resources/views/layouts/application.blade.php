@@ -21,7 +21,7 @@
 
     <!-- Modules -->
     @yield('css')
-    @vite(['resources/sass/main.scss', 'resources/js/oneui/app.js'])
+    @vite(['resources/sass/main.scss'])
 
 
     <!-- Icons -->

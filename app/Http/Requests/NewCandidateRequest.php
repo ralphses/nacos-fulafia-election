@@ -26,8 +26,8 @@ class NewCandidateRequest extends FormRequest
     public function rules()
     {
         return [
-            'candidate-name' => ['required', 'regex:(\\w)', Rule::unique('candidates', 'fullname')],
-            'candidate-matric' => ['required', 'regex:(\\w)', Rule::unique('candidates', 'matric')],
+            'candidate-name' => ['required', 'regex:(\\w)'],
+            'candidate-matric' => ['required', 'regex:(\\w)'],
             'candidate-position' => ['required', Rule::in(Utility::POSITIONS)],
             'candidate-level' => ['required', Rule::in(array_values(Utility::LEVELS))],
             'candidate-screened' => ['required', Rule::in(["1", "2"])],
