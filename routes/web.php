@@ -4,8 +4,10 @@ use App\Http\Controllers\CandidatesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ElectionController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\VotersController;
 use Illuminate\Support\Facades\Route;
+use Mockery\VerificationDirector;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [SiteController::class, 'welcome'])->name('welcome');
+Route::get('/verify', [VerificationController::class, 'index'])
+    ->name('voters.verify');
+Route::get('/status', [VerificationController::class, 'index'])
+    ->name('voters.verify');
+    
+Route::post('/verify', [VerificationController::class, 'verify'])
+        ->name('voters.verify');
 
 Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () {
 
@@ -32,6 +41,12 @@ Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () 
 
         Route::get('/add', [CandidatesController::class, 'create'])
             ->name('candidates.add');
+
+        Route::get('/add/all', [CandidatesController::class, 'addAll'])
+            ->name('candidates.add.all');
+
+         Route::post('/add/all', [CandidatesController::class, 'addAll'])
+            ->name('candidates.add.all');
 
         Route::get('/view/{id}', [CandidatesController::class, 'show'])
             ->name('candidates.view');
@@ -99,7 +114,6 @@ Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () 
         Route::get('/', [ElectionController::class, 'positions'])
             ->name('positions.all');
     });
-
 });
 
 Route::prefix('voters')->group(function () {
@@ -123,4 +137,4 @@ Route::prefix('voters')->group(function () {
         ->name('voters.vote.start');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

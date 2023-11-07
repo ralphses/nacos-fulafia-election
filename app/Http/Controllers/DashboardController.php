@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Election;
 use App\Utils\Utility;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class DashboardController extends Controller
@@ -28,7 +27,4 @@ class DashboardController extends Controller
         ]]);
     }
 
-    public function setElectionDate() {
-//        return response()->view();
-    }
 }

@@ -25,7 +25,7 @@
                                         <div class="form-check form-block text-center">
                                             <input class="form-check-input" type="radio" value="{{ $cand->id }}" id="{{ $cand->id }}" name="{{ $post }}">
                                             <label class="form-check-label justify-content-center" for="{{ $cand->id }}">
-                                                <img class="card-img-top img-avatar48" src="{{asset($cand->image_path)}}" alt="">
+                                                <img class="card-img-top img-avatar48" src="{{asset(Storage::url($cand->image_path))}}" alt="">
                                                 <span class="d-flex align-items-center">
                                                   <span class="ms-2">
                                                     <span class="fw-bold">{{ $cand->fullname }}</span>

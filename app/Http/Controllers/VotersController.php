@@ -16,7 +16,6 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Crypt;
-use Illuminate\Validation\Rule;
 use Nette\Utils\Random;
 
 class VotersController extends Controller
@@ -32,11 +31,10 @@ class VotersController extends Controller
             ->orderBy('date', 'desc')
             ->first();
 
-        if(is_null($readyElection)) {
+        if (is_null($readyElection)) {
             return response()->redirectTo(route('dashboard'))->with('dashboard', 'Start election first');
         }
         return response()->view('dashboard.voters.all', ['voters' => Voters::where('election_id', $readyElection->id)->get()]);
-
     }
 
     /**
@@ -50,7 +48,7 @@ class VotersController extends Controller
             ->orderBy('date', 'desc')
             ->first();
 
-        if($readyElection) {
+        if ($readyElection) {
             return redirect()->back()->with('voters-error', 'Election ongoing, cannot add voters at this time');
         }
 
@@ -73,7 +71,7 @@ class VotersController extends Controller
 
         $voterMatric = $request->get('voter-matric');
 
-        if(Voters::where('election_id', $readyElection->id)->where('matric', $voterMatric)->first()) {
+        if (Voters::where('election_id', $readyElection->id)->where('matric', $voterMatric)->first()) {
             return redirect()->back()->withInput()->withErrors(['voter-matric' => 'Matric already added for current election']);
         }
 
@@ -117,25 +115,24 @@ class VotersController extends Controller
         $request->validated();
 
         $currentElection = Election::where('status', Utility::ELECTION_STATUS['start'])
-            ->orderBy('date', 'desc')
+            ->latest('date')
             ->first();
 
-        $voter = Voters::where('matric', $request->get('matric'))
-            ->where('election_id', $currentElection->id)
+        $voter = Voters::where('matric', $request->input('matric'))
+            ->where('election_id', optional($currentElection)->id)
             ->first();
 
-        if($voter->email OR $voter->name OR $voter->voter_id) {
-            return redirect()->back()->withErrors(['matric' => 'This matric number already authenticated!']);
+        if ($voter && ($voter->email || $voter->name || $voter->voter_id)) {
+            return redirect()->back()->withErrors(['matric' => 'This matric number is already authenticated!']);
         }
 
         $voter->update([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
             'voter_id' => Crypt::encrypt($this->generateVoterId())
         ]);
 
         return view('auth.voter.authentication-success');
-
     }
 
     /**
@@ -155,27 +152,26 @@ class VotersController extends Controller
             ->orderBy('date', 'desc')
             ->first();
 
-        if(is_null($readyElection)) {
+        if (is_null($readyElection)) {
             return redirect(route('voters.vote.start'))->withErrors(['voterId' => 'Invalid or Expired VIN']);
-
         }
 
         $voter = Voters::where('election_id', $readyElection->id)->get()
-            ->filter(function ($v) { return !is_null($v->voter_id); })
+            ->filter(function ($v) {
+                return !is_null($v->voter_id);
+            })
             ->filter(function ($value) use ($voterId) {
                 $id = Crypt::decrypt($value->voter_id);
                 return $voterId == $id;
-        })->first();
+            })->first();
 
-        if(is_null($voter)) {
+        if (is_null($voter)) {
             return redirect(route('voters.vote.start'))->withErrors(['voterId' => 'Invalid or Expired VIN']);
         }
 
-        if($voter->voted) {
+        if ($voter->voted) {
             return redirect(route('voters.vote.start'))->withErrors(['voterId' => 'Voter with this ID voted already!']);
-        }
-
-        else {
+        } else {
 
             $candidates = $this->sortCandidates(Candidates::where('election_id', $readyElection->id)->get());
 
@@ -193,7 +189,7 @@ class VotersController extends Controller
             ->orderBy('date', 'desc')
             ->first();
 
-        if(is_null($readyElection)) {
+        if (is_null($readyElection)) {
             return response()->redirectTo(route('voters.authenticate'))->with('start', 'Not available');
         }
 
@@ -239,19 +235,20 @@ class VotersController extends Controller
 
             $candidateId = $request->get($position);
 
-            if(!is_null($candidateId) AND $candidateId > 0) {
+            if (!is_null($candidateId) and $candidateId > 0) {
                 $candidate = Candidates::find($candidateId);
                 $candidate->update(['total_votes' => $candidate->total_votes + 1]);
             }
         }
 
         $thisVoter = Voters::all()
-            ->filter(function ($v) { return !is_null($v->voter_id); })
+            ->filter(function ($v) {
+                return !is_null($v->voter_id);
+            })
             ->filter(function ($v) use ($voter) {
-            $id = Crypt::decrypt($v->voter_id);
-            return $voter === $id;
-
-        })->first();
+                $id = Crypt::decrypt($v->voter_id);
+                return $voter === $id;
+            })->first();
 
         $thisVoter->update(['voted' => true]);
 

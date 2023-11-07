@@ -8,7 +8,8 @@
                         <h3 class="block-title">Sign In</h3>
                         <div class="block-options">
                             @if (Route::has('password.request'))
-                                <a class="btn-block-option fs-sm" href="{{ route('password.request') }}">Forgot Password?</a>
+                                <a class="btn-block-option fs-sm" href="{{ route('password.request') }}">Forgot
+                                    Password?</a>
                             @endif
                         </div>
                     </div>
@@ -25,27 +26,32 @@
                                     @csrf
 
                                     <div class="mb-4">
-                                        <input type="text" class="form-control form-control-alt form-control-lg" id="login-username" name="email" placeholder="Email address">
-                                        @if($errors->any('email'))
+                                        <input type="text" class="form-control form-control-alt form-control-lg"
+                                            id="login-username" name="email" placeholder="Email address">
+                                        @if ($errors->any('email'))
                                             <p style="color: red; font-size: medium">{{ $errors->first('email') }}</p>
                                         @endif
                                     </div>
                                     <div class="mb-4">
-                                        <input type="password" class="form-control form-control-alt form-control-lg" id="login-password" name="password" placeholder="Password">
-                                        @if($errors->any('password'))
-                                            <p style="color: red; font-size: medium">{{ $errors->first('password') }}</p>
+                                        <input type="password" class="form-control form-control-alt form-control-lg"
+                                            id="login-password" name="password" placeholder="Password">
+                                        @if ($errors->any('password'))
+                                            <p style="color: red; font-size: medium">{{ $errors->first('password') }}
+                                            </p>
                                         @endif
                                     </div>
                                     <div class="mb-4">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="login-remember" name="remember">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="login-remember" name="remember">
                                             <label class="form-check-label" for="login-remember">Remember Me</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row mb-4">
                                     <div class="col-md-6 col-xl-5">
-                                        <button type="submit" class="btn w-100 btn-alt-success text-white" style="background-color: #198906">
+                                        <button type="submit" class="btn w-100 btn-alt-success text-white"
+                                            style="background-color: #198906">
                                             Sign In
                                         </button>
                                     </div>
@@ -59,7 +65,7 @@
             </div>
         </div>
         <div class="fs-sm text-muted text-center">
-            <strong>OneUI 5.5</strong> &copy; <span data-toggle="year-copy"></span>
+            <strong>NACOS | FULafia</strong> &copy; <span data-toggle="year-copy"></span>
         </div>
     </div>
 </div>

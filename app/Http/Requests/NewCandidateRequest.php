@@ -31,7 +31,7 @@ class NewCandidateRequest extends FormRequest
             'candidate-position' => ['required', Rule::in(Utility::POSITIONS)],
             'candidate-level' => ['required', Rule::in(array_values(Utility::LEVELS))],
             'candidate-screened' => ['required', Rule::in(["1", "2"])],
-            'candidate-photo' => ['required', Rule::file()],
+            'candidate-photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 }

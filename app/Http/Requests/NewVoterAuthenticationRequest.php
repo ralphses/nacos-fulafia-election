@@ -27,7 +27,7 @@ class NewVoterAuthenticationRequest extends FormRequest
         return [
             'matric' => ['required', Rule::exists('voters', 'matric')],
             'name' => ['required', 'regex:(\\w)'],
-            'email' => ['required', 'email']
+            'email' => ['required', 'email', Rule::unique("voters", 'email')]
         ];
     }
 }

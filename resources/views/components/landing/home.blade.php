@@ -3,7 +3,7 @@
     <div class="bg-primary-dark-op py-9 overflow-hidden">
         <div class="content content-full text-center">
             <h1 class="display-4 fw-semibold text-white mb-2">
-                NACOS 2023 ELECTIONS
+                NACOS FULafia ELECTIONS
             </h1>
 
             @if($ready === \App\Utils\Utility::ELECTION_STATUS['on'])

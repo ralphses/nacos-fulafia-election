@@ -72,8 +72,7 @@ class ElectionController extends Controller
         return response()->redirectTo(route('election.all'));
 
     }
-
-
+    
     /**
      * Remove the specified resource from storage.
      *

@@ -11,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 class CandidatesController extends Controller
@@ -26,7 +27,7 @@ class CandidatesController extends Controller
             ->orderBy('date', 'desc')
             ->first();
 
-        if(is_null($readyElection)) {
+        if (is_null($readyElection)) {
             return response()->redirectTo(route('dashboard'))->with('dashboard', 'Start election first');
         }
 
@@ -43,12 +44,34 @@ class CandidatesController extends Controller
 
         $ongoingElection = Election::where('status', Utility::ELECTION_STATUS['on'])->first();
 
-        if($ongoingElection) {
+        if ($ongoingElection) {
             return redirect()->back()->with('candidates-error', 'Election ongoing, cannot add candidate at this time');
         }
 
         return response()->view('dashboard.candidates.add');
+    }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return RedirectResponse|Response
+     */
+    public function addAll(Request $request): Response|RedirectResponse
+    {
+        if ($request->method() === "GET") {
+            $ongoingElection = Election::where('status', Utility::ELECTION_STATUS['on'])->first();
+
+            if ($ongoingElection) {
+                return redirect()->back()->with('candidates-error', 'Election ongoing, cannot add candidate at this time');
+            }
+
+            return response()->view('dashboard.candidates.addAll');
+        }
+        else {
+            $file = $request->file('candidate-list');
+            $path = $file->storeAs('pdf/candidates', 'candidates.pdf', 'local');
+            dd($request->allFiles());
+        }
     }
 
     /**
@@ -67,7 +90,7 @@ class CandidatesController extends Controller
             ->where('matric', $request->get('candidate-matric'))
             ->first();
 
-        if($addedCandidate) {
+        if ($addedCandidate) {
             return redirect()->back()->withInput()->withErrors(['candidate-name' => 'Candidate with name or matric already added for this election']);
         }
 
@@ -107,7 +130,6 @@ class CandidatesController extends Controller
 
         $candidate->update(['active' => !$candidate->active]);
         return redirect(route('candidates.all'))->with('candidates', 'Candidate updated!');
-
     }
 
     /**
@@ -129,7 +151,7 @@ class CandidatesController extends Controller
         ]);
 
         $candidate = Candidates::find($id);
-        $file = $request->file('candidate-photo') ?? false;
+        $file = $request->hasFile('candidate-photo');
 
         $candidate->update([
             'fullname' => $request->get('candidate-name'),
@@ -143,27 +165,19 @@ class CandidatesController extends Controller
         return redirect(route('candidates.all'))->with('candidates', 'Candidate updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Candidates  $candidates
-     * @return Response
-     */
-    public function destroy(Candidates $candidates)
-    {
-        //
-    }
 
     private function storeImage(Request $request): array|string
     {
 
+        $image = $request->file('candidate-photo');
+
         $name = str_replace(' ', '', $request->get('candidate-name') . $request->get('candidate-position'));
-        $newImage = uniqid() . '-' . $name . '.' . $request->file('candidate-photo')->extension();
 
-        $move = $request->file('candidate-photo')->move(public_path('assets/images/candidates/photos'), $newImage, true);
-        $move = str_replace("\assets", '/assets', $move);
+        $imageName = preg_replace('/[^A-Za-z]/', '', (uniqid() . '-' . $name));
+        $imageName =  $imageName . '.' . $request->file('candidate-photo')->extension();
 
-        return str_replace(str_replace('app\Http\Controllers', '', __DIR__).'public', '', $move);
-
+        return $image->storeAs("public/images/candidates", $imageName);
     }
+
+    
 }
