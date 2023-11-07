@@ -1,5 +1,5 @@
 # Use the official PHP and Node Docker images as base
-FROM php:8.0-apache
+FROM php:8.2-cli
 
 # Set working directory
 WORKDIR /var/www/html
