@@ -6,13 +6,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
-        "aws/aws-sdk-php": "^3.283",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/breeze": "^1.18",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "league/flysystem-aws-s3-v3": "^3.16",
         "setasign/fpdf": "^1.8",
         "setasign/fpdi": "^2.5"
     },
