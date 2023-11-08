@@ -13,18 +13,22 @@ class Utility
         'Assistant Secretary General',
         'Senator',
         'Treasurer',
-        'Welfare Director',
+        'Welfare Director I',
+        'Welfare Director II',
         'Financial Secretary',
-        'Director of Sports',
-        'Director of Socials',
+        'Director of Sports I',
+        'Director of Sports II',
+        'Director of Socials I',
+        'Director of Socials II',
         'Director, Media and Publicity I',
         'Director, Media and Publicity II',
+        'Director, Media and Publicity III',
         'Auditor General',
         'Director of Academics I',
         'Director of Academics II',
         'Director of Research and Innovation I',
         'Director of Research and Innovation II',
-        'Provost Marshal',
+        'Provost Marshal'
     ];
 
     public const LEVELS = ['200' => '200 Level', '300' => '300 Level'];
