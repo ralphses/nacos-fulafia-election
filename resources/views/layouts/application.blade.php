@@ -19,7 +19,9 @@
 
     <!-- Modules -->
     @yield('css')
-    @vite(['resources/sass/main.scss'])
+    {{-- @vite(['resources/sass/main.scss']) --}}
+    <link rel="stylesheet" href="{{ asset('public/build/assets/app-5c9923a3.css') }}">
+
 
 
     <!-- Icons -->
