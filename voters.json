@@ -1,666 +1,946 @@
 [
     {
-     "S/N": 1,
-     "Names": "EKPAH PRECIOUS UKPE-OJO",
-     "MatricNumber": "2019/SC/CSC/0003"
+        "S/N": 1,
+        "Names": "EKPAH PRECIOUS UKPE-OJO",
+        "MatricNumber": "2019/SC/CSC/0003"
     },
     {
-     "S/N": 2,
-     "Names": "OMOTUNDE GABRIEL OLUWADAMILARE",
-     "MatricNumber": "2019/SC/CSC/0004"
+        "S/N": 2,
+        "Names": "OMOTUNDE GABRIEL OLUWADAMILARE",
+        "MatricNumber": "2019/SC/CSC/0004"
     },
     {
-     "S/N": 3,
-     "Names": "YAKUBU IBRAHIM RILWANU",
-     "MatricNumber": "2019/SC/CSC/0005"
+        "S/N": 3,
+        "Names": "YAKUBU IBRAHIM RILWANU",
+        "MatricNumber": "2019/SC/CSC/0005"
     },
     {
-     "S/N": 4,
-     "Names": "ABULKARIM MUHAMMAD AMINU",
-     "MatricNumber": "2019/SC/CSC/0007"
+        "S/N": 3,
+        "Names": "YAKUBU IBRAHIM RILWANU",
+        "MatricNumber": "2019/SC/CSC/0006"
     },
     {
-     "S/N": 5,
-     "Names": "FRANCIS DAVIN NWACHUKWU",
-     "MatricNumber": "2019/SC/CSC/0008"
+        "S/N": 4,
+        "Names": "ABULKARIM MUHAMMAD AMINU",
+        "MatricNumber": "2019/SC/CSC/0007"
     },
     {
-     "S/N": 6,
-     "Names": "SAID MUSA ISHAQ",
-     "MatricNumber": "2019/SC/CSC/0010"
+        "S/N": 5,
+        "Names": "FRANCIS DAVIN NWACHUKWU",
+        "MatricNumber": "2019/SC/CSC/0008"
     },
     {
-     "S/N": 7,
-     "Names": "GRUMLA MUTJONG DATAU",
-     "MatricNumber": "2019/SC/CSC/0011"
+        "S/N": 5,
+        "Names": "FRANCIS DAVIN NWACHUKWU",
+        "MatricNumber": "2019/SC/CSC/0009"
     },
     {
-     "S/N": 8,
-     "Names": "ANJUGU MEVYE REJOICE",
-     "MatricNumber": "2019/SC/CSC/0012"
+        "S/N": 6,
+        "Names": "SAID MUSA ISHAQ",
+        "MatricNumber": "2019/SC/CSC/0010"
     },
     {
-     "S/N": 9,
-     "Names": "ABDULRAHAMAN IZE MONICA",
-     "MatricNumber": "2019/SC/CSC/0013"
+        "S/N": 7,
+        "Names": "GRUMLA MUTJONG DATAU",
+        "MatricNumber": "2019/SC/CSC/0011"
     },
     {
-     "S/N": 10,
-     "Names": "MAIWADA ASMAU IDRIS",
-     "MatricNumber": "2019/SC/CSC/0014"
+        "S/N": 8,
+        "Names": "ANJUGU MEVYE REJOICE",
+        "MatricNumber": "2019/SC/CSC/0012"
     },
     {
-     "S/N": 11,
-     "Names": "AROP GRACE KAKA",
-     "MatricNumber": "2019/SC/CSC/0015"
+        "S/N": 9,
+        "Names": "ABDULRAHAMAN IZE MONICA",
+        "MatricNumber": "2019/SC/CSC/0013"
     },
     {
-     "S/N": 12,
-     "Names": "JONAH VICTOR",
-     "MatricNumber": "2019/SC/CSC/0016"
+        "S/N": 10,
+        "Names": "MAIWADA ASMAU IDRIS",
+        "MatricNumber": "2019/SC/CSC/0014"
     },
     {
-     "S/N": 13,
-     "Names": "ABDULWAHAB FAISAL ASUKU",
-     "MatricNumber": "2019/SC/CSC/0017"
+        "S/N": 11,
+        "Names": "AROP GRACE KAKA",
+        "MatricNumber": "2019/SC/CSC/0015"
     },
     {
-     "S/N": 14,
-     "Names": "MOMOH KHADIJAT FAVOUR",
-     "MatricNumber": "2019/SC/CSC/0018"
+        "S/N": 12,
+        "Names": "JONAH VICTOR",
+        "MatricNumber": "2019/SC/CSC/0016"
     },
     {
-     "S/N": 15,
-     "Names": "SHOBAJO OLUWATOBI",
-     "MatricNumber": "2019/SC/CSC/0020"
+        "S/N": 13,
+        "Names": "ABDULWAHAB FAISAL ASUKU",
+        "MatricNumber": "2019/SC/CSC/0017"
     },
     {
-     "S/N": 16,
-     "Names": "ABIYO SAMUEL GBOYU",
-     "MatricNumber": "2019/SC/CSC/0022"
+        "S/N": 14,
+        "Names": "MOMOH KHADIJAT FAVOUR",
+        "MatricNumber": "2019/SC/CSC/0018"
     },
     {
-     "S/N": 17,
-     "Names": "MOSES MARK",
-     "MatricNumber": "2019/SC/CSC/0023"
+        "S/N": 14,
+        "Names": "MOMOH KHADIJAT FAVOUR",
+        "MatricNumber": "2019/SC/CSC/0019"
     },
     {
-     "S/N": 18,
-     "Names": "BOWOFOLA OSEMUDIAMEN JUWON",
-     "MatricNumber": "2019/SC/CSC/0024"
+        "S/N": 15,
+        "Names": "SHOBAJO OLUWATOBI",
+        "MatricNumber": "2019/SC/CSC/0020"
     },
     {
-     "S/N": 19,
-     "Names": "EMMANUEL YUSUF OVEY",
-     "MatricNumber": "2019/SC/CSC/0025"
+        "S/N": 16,
+        "Names": "ABIYO SAMUEL GBOYU",
+        "MatricNumber": "2019/SC/CSC/0022"
     },
     {
-     "S/N": 20,
-     "Names": "AYITOGO MERCY FELIX",
-     "MatricNumber": "2019/SC/CSC/0027"
+        "S/N": 17,
+        "Names": "MOSES MARK",
+        "MatricNumber": "2019/SC/CSC/0023"
     },
     {
-     "S/N": 21,
-     "Names": "IORSHENGE JAMES TAVERSHIMA",
-     "MatricNumber": "2019/SC/CSC/0029"
+        "S/N": 18,
+        "Names": "BOWOFOLA OSEMUDIAMEN JUWON",
+        "MatricNumber": "2019/SC/CSC/0024"
     },
     {
-     "S/N": 22,
-     "Names": "AMOS FAVOUR ORINAMI",
-     "MatricNumber": "2019/SC/CSC/0030"
+        "S/N": 19,
+        "Names": "EMMANUEL YUSUF OVEY",
+        "MatricNumber": "2019/SC/CSC/0025"
     },
     {
-     "S/N": 23,
-     "Names": "IBRAHIM IBRAHIM AGABE",
-     "MatricNumber": "2019/SC/CSC/0031"
+        "S/N": 19,
+        "Names": "EMMANUEL YUSUF OVEY",
+        "MatricNumber": "2019/SC/CSC/0026"
     },
     {
-     "S/N": 24,
-     "Names": "ABE SHOLADOYE BOLUWATIFE",
-     "MatricNumber": "2019/SC/CSC/0033"
+        "S/N": 20,
+        "Names": "AYITOGO MERCY FELIX",
+        "MatricNumber": "2019/SC/CSC/0027"
     },
     {
-     "S/N": 25,
-     "Names": "BALOGUN ISHAQ MURTALA",
-     "MatricNumber": "2019/SC/CSC/0034"
+        "S/N": 20,
+        "Names": "AYITOGO MERCY FELIX",
+        "MatricNumber": "2019/SC/CSC/0028"
     },
     {
-     "S/N": 26,
-     "Names": "EMMANUEL CYRENE MUGALA",
-     "MatricNumber": "2019/SC/CSC/0035"
+        "S/N": 21,
+        "Names": "IORSHENGE JAMES TAVERSHIMA",
+        "MatricNumber": "2019/SC/CSC/0029"
     },
     {
-     "S/N": 27,
-     "Names": "ADETUNJI ABIODUN EMMANUEL",
-     "MatricNumber": "2019/SC/CSC/0036"
+        "S/N": 22,
+        "Names": "AMOS FAVOUR ORINAMI",
+        "MatricNumber": "2019/SC/CSC/0030"
     },
     {
-     "S/N": 28,
-     "Names": "TERNA BATHOLOMEW SESUGH",
-     "MatricNumber": "2019/SC/CSC/0037"
+        "S/N": 23,
+        "Names": "IBRAHIM IBRAHIM AGABE",
+        "MatricNumber": "2019/SC/CSC/0031"
     },
     {
-     "S/N": 29,
-     "Names": "PATRICK OVEY ILIYA",
-     "MatricNumber": "2019/SC/CSC/0038"
+        "S/N": 23,
+        "Names": "IBRAHIM IBRAHIM AGABE",
+        "MatricNumber": "2019/SC/CSC/0032"
     },
     {
-     "S/N": 30,
-     "Names": "JONATHAN SYLVANUS PHILIP",
-     "MatricNumber": "2019/SC/CSC/0040"
+        "S/N": 24,
+        "Names": "ABE SHOLADOYE BOLUWATIFE",
+        "MatricNumber": "2019/SC/CSC/0033"
     },
     {
-     "S/N": 31,
-     "Names": "DANJA USMAN HANNATU",
-     "MatricNumber": "2019/SC/CSC/0041"
+        "S/N": 25,
+        "Names": "BALOGUN ISHAQ MURTALA",
+        "MatricNumber": "2019/SC/CSC/0034"
     },
     {
-     "S/N": 32,
-     "Names": "OPARAUWAKWE FAVOUR ESTHER",
-     "MatricNumber": "2019/SC/CSC/0044"
+        "S/N": 26,
+        "Names": "EMMANUEL CYRENE MUGALA",
+        "MatricNumber": "2019/SC/CSC/0035"
     },
     {
-     "S/N": 33,
-     "Names": "SANI UMAR OSEZE",
-     "MatricNumber": "2019/SC/CSC/0045"
+        "S/N": 27,
+        "Names": "ADETUNJI ABIODUN EMMANUEL",
+        "MatricNumber": "2019/SC/CSC/0036"
     },
     {
-     "S/N": 34,
-     "Names": "KUDU ELKANAH MCSTONE",
-     "MatricNumber": "2019/SC/CSC/0046"
+        "S/N": 28,
+        "Names": "TERNA BATHOLOMEW SESUGH",
+        "MatricNumber": "2019/SC/CSC/0037"
     },
     {
-     "S/N": 35,
-     "Names": "ABUBAKAR MUSA KHAULAT",
-     "MatricNumber": "2019/SC/CSC/0047"
+        "S/N": 29,
+        "Names": "PATRICK OVEY ILIYA",
+        "MatricNumber": "2019/SC/CSC/0038"
     },
     {
-     "S/N": 36,
-     "Names": "JOHN AKOLO SABO",
-     "MatricNumber": "2019/SC/CSC/0048"
+        "S/N": 29,
+        "Names": "PATRICK OVEY ILIYA",
+        "MatricNumber": "2019/SC/CSC/0039"
     },
     {
-     "S/N": 37,
-     "Names": "HUDU RUQAYYAH MUSA",
-     "MatricNumber": "2019/SC/CSC/0049"
+        "S/N": 30,
+        "Names": "JONATHAN SYLVANUS PHILIP",
+        "MatricNumber": "2019/SC/CSC/0040"
     },
     {
-     "S/N": 38,
-     "Names": "GALADIMA FAISAL JAMILU",
-     "MatricNumber": "2019/SC/CSC/0050"
+        "S/N": 31,
+        "Names": "DANJA USMAN HANNATU",
+        "MatricNumber": "2019/SC/CSC/0041"
     },
     {
-     "S/N": 39,
-     "Names": "SIMEON JUSTIN UDOCHUKWU",
-     "MatricNumber": "2019/SC/CSC/0051"
+        "S/N": 31,
+        "Names": "DANJA USMAN HANNATU",
+        "MatricNumber": "2019/SC/CSC/0042"
     },
     {
-     "S/N": 40,
-     "Names": "OTUOGBAI PROSPER EMMANUEL",
-     "MatricNumber": "2019/SC/CSC/0053"
+        "S/N": 31,
+        "Names": "DANJA USMAN HANNATU",
+        "MatricNumber": "2019/SC/CSC/0043"
     },
     {
-     "S/N": 41,
-     "Names": "MUHAMMAD YAHAYA TAMA",
-     "MatricNumber": "2019/SC/CSC/0054"
+        "S/N": 32,
+        "Names": "OPARAUWAKWE FAVOUR ESTHER",
+        "MatricNumber": "2019/SC/CSC/0044"
     },
     {
-     "S/N": 42,
-     "Names": "SUMAIYA SALIHU ADAMU",
-     "MatricNumber": "2019/SC/CSC/0055"
+        "S/N": 33,
+        "Names": "SANI UMAR OSEZE",
+        "MatricNumber": "2019/SC/CSC/0045"
     },
     {
-     "S/N": 43,
-     "Names": "JONAS VICTOR OGONKACHA",
-     "MatricNumber": "2019/SC/CSC/0057"
+        "S/N": 34,
+        "Names": "KUDU ELKANAH MCSTONE",
+        "MatricNumber": "2019/SC/CSC/0046"
     },
     {
-     "S/N": 44,
-     "Names": "ALOME SARDAUNA BENEDITA",
-     "MatricNumber": "2019/SC/CSC/0059"
+        "S/N": 35,
+        "Names": "ABUBAKAR MUSA KHAULAT",
+        "MatricNumber": "2019/SC/CSC/0047"
     },
     {
-     "S/N": 45,
-     "Names": "AMEH KINGVICTOR IDOKO",
-     "MatricNumber": "2019/SC/CSC/0060"
+        "S/N": 36,
+        "Names": "JOHN AKOLO SABO",
+        "MatricNumber": "2019/SC/CSC/0048"
     },
     {
-     "S/N": 46,
-     "Names": "ANDA-KIGBU J. JULIAN",
-     "MatricNumber": "2019/SC/CSC/0061"
+        "S/N": 37,
+        "Names": "HUDU RUQAYYAH MUSA",
+        "MatricNumber": "2019/SC/CSC/0049"
     },
     {
-     "S/N": 47,
-     "Names": "ARIWEL LAZARUS EWUGA",
-     "MatricNumber": "2019/SC/CSC/0062"
+        "S/N": 38,
+        "Names": "GALADIMA FAISAL JAMILU",
+        "MatricNumber": "2019/SC/CSC/0050"
     },
     {
-     "S/N": 48,
-     "Names": "WILLIAMS ADZUHZEN DORATHY",
-     "MatricNumber": "2019/SC/CSC/0063"
+        "S/N": 39,
+        "Names": "SIMEON JUSTIN UDOCHUKWU",
+        "MatricNumber": "2019/SC/CSC/0051"
     },
     {
-     "S/N": 49,
-     "Names": "EGBA WALTER ARIA",
-     "MatricNumber": "2019/SC/CSC/0064"
+        "S/N": 39,
+        "Names": "SIMEON JUSTIN UDOCHUKWU",
+        "MatricNumber": "2019/SC/CSC/0052"
     },
     {
-     "S/N": 50,
-     "Names": "FRANCIS HOPE MIKPO",
-     "MatricNumber": "2019/SC/CSC/0065"
+        "S/N": 40,
+        "Names": "OTUOGBAI PROSPER EMMANUEL",
+        "MatricNumber": "2019/SC/CSC/0053"
     },
     {
-     "S/N": 51,
-     "Names": "GEORGE IMHANDEGBELO",
-     "MatricNumber": "2019/SC/CSC/0066"
+        "S/N": 41,
+        "Names": "MUHAMMAD YAHAYA TAMA",
+        "MatricNumber": "2019/SC/CSC/0054"
     },
     {
-     "S/N": 52,
-     "Names": "ENVULADU WILSON CHRISTOPHER",
-     "MatricNumber": "2019/SC/CSC/0068"
+        "S/N": 42,
+        "Names": "SUMAIYA SALIHU ADAMU",
+        "MatricNumber": "2019/SC/CSC/0055"
     },
     {
-     "S/N": 53,
-     "Names": "SULEIMAN ABDULLAHI GARBA",
-     "MatricNumber": "2019/SC/CSC/0070"
+        "S/N": 42,
+        "Names": "SUMAIYA SALIHU ADAMU",
+        "MatricNumber": "2019/SC/CSC/0056"
     },
     {
-     "S/N": 54,
-     "Names": "MOSES JEGA",
-     "MatricNumber": "2019/SC/CSC/0073"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0057"
     },
     {
-     "S/N": 55,
-     "Names": "AUWAN YAHAYA",
-     "MatricNumber": "2019/SC/CSC/0074"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0058"
     },
     {
-     "S/N": 56,
-     "Names": "ILIYASU HASSAN",
-     "MatricNumber": "2019/SC/CSC/0075"
+        "S/N": 44,
+        "Names": "ALOME SARDAUNA BENEDITA",
+        "MatricNumber": "2019/SC/CSC/0059"
     },
     {
-     "S/N": 57,
-     "Names": "ZUBAIRU AISHAT KUYANBANA",
-     "MatricNumber": "2019/SC/CSC/0076"
+        "S/N": 45,
+        "Names": "AMEH KINGVICTOR IDOKO",
+        "MatricNumber": "2019/SC/CSC/0060"
     },
     {
-     "S/N": 58,
-     "Names": "MERCY CHIMNONSO ANAEFULA",
-     "MatricNumber": "2019/SC/CSC/0077"
+        "S/N": 46,
+        "Names": "ANDA-KIGBU J. JULIAN",
+        "MatricNumber": "2019/SC/CSC/0061"
     },
     {
-     "S/N": 59,
-     "Names": "DESIRE JOSEPH CHIDERA",
-     "MatricNumber": "2019/SC/CSC/0079"
+        "S/N": 47,
+        "Names": "ARIWEL LAZARUS EWUGA",
+        "MatricNumber": "2019/SC/CSC/0062"
     },
     {
-     "S/N": 60,
-     "Names": "UMAR ABDULLAHI USMAN",
-     "MatricNumber": "2019/SC/CSC/0080"
+        "S/N": 48,
+        "Names": "WILLIAMS ADZUHZEN DORATHY",
+        "MatricNumber": "2019/SC/CSC/0063"
     },
     {
-     "S/N": 61,
-     "Names": "TAIMAKO JULIUS JESSA",
-     "MatricNumber": "2019/SC/CSC/0081"
+        "S/N": 49,
+        "Names": "EGBA WALTER ARIA",
+        "MatricNumber": "2019/SC/CSC/0064"
     },
     {
-     "S/N": 62,
-     "Names": "ABIMIKU LUCKY LINUS",
-     "MatricNumber": "2019/SC/CSC/0082"
+        "S/N": 50,
+        "Names": "FRANCIS HOPE MIKPO",
+        "MatricNumber": "2019/SC/CSC/0065"
     },
     {
-     "S/N": 63,
-     "Names": "JAMES VICTOR GLANI",
-     "MatricNumber": "2019/SC/CSC/0084"
+        "S/N": 51,
+        "Names": "GEORGE IMHANDEGBELO",
+        "MatricNumber": "2019/SC/CSC/0066"
     },
     {
-     "S/N": 64,
-     "Names": "LAWRENCE DARWAT DUNG",
-     "MatricNumber": "2019/SC/CSC/0089"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0067"
     },
     {
-     "S/N": 65,
-     "Names": "ABDULAZEEZ HASSAN",
-     "MatricNumber": "2019/SC/CSC/0091"
+        "S/N": 52,
+        "Names": "ENVULADU WILSON CHRISTOPHER",
+        "MatricNumber": "2019/SC/CSC/0068"
     },
     {
-     "S/N": 66,
-     "Names": "FEDRICK AKOLO AKPE",
-     "MatricNumber": "2019/SC/CSC/0092"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0069"
     },
     {
-     "S/N": 67,
-     "Names": "HENRY ALIKA",
-     "MatricNumber": "2019/SC/CSC/0095"
+        "S/N": 53,
+        "Names": "SULEIMAN ABDULLAHI GARBA",
+        "MatricNumber": "2019/SC/CSC/0070"
     },
     {
-     "S/N": 68,
-     "Names": "AMOS LOVETH",
-     "MatricNumber": "2019/SC/CSC/0096"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0071"
     },
     {
-     "S/N": 69,
-     "Names": "APE OGUWCHE MICHAEL",
-     "MatricNumber": "2019/SC/CSC/0097"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0072"
     },
     {
-     "S/N": 70,
-     "Names": "BITRUS EMMANUEL",
-     "MatricNumber": "2019/SC/CSC/0099"
+        "S/N": 54,
+        "Names": "MOSES JEGA",
+        "MatricNumber": "2019/SC/CSC/0073"
     },
     {
-     "S/N": 71,
-     "Names": "BITRUS EZRA KATOH",
-     "MatricNumber": "2019/SC/CSC/0100"
+        "S/N": 55,
+        "Names": "AUWAN YAHAYA",
+        "MatricNumber": "2019/SC/CSC/0074"
     },
     {
-     "S/N": 72,
-     "Names": "FAHAD MUHAMMAD YUSUF",
-     "MatricNumber": "2019/SC/CSC/0101"
+        "S/N": 56,
+        "Names": "ILIYASU HASSAN",
+        "MatricNumber": "2019/SC/CSC/0075"
     },
     {
-     "S/N": 73,
-     "Names": "HASSAN BABA ADAMU",
-     "MatricNumber": "2019/SC/CSC/0103"
+        "S/N": 57,
+        "Names": "ZUBAIRU AISHAT KUYANBANA",
+        "MatricNumber": "2019/SC/CSC/0076"
     },
     {
-     "S/N": 74,
-     "Names": "ISA IBRAHIM",
-     "MatricNumber": "2019/SC/CSC/0106"
+        "S/N": 58,
+        "Names": "MERCY CHIMNONSO ANAEFULA",
+        "MatricNumber": "2019/SC/CSC/0077"
     },
     {
-     "S/N": 75,
-     "Names": "ABDULHAKIM YUSUF ISAH",
-     "MatricNumber": "2019/SC/CSC/0107"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0078"
     },
     {
-     "S/N": 76,
-     "Names": "SALIH ISAH OSABO",
-     "MatricNumber": "2019/SC/CSC/0108"
+        "S/N": 59,
+        "Names": "DESIRE JOSEPH CHIDERA",
+        "MatricNumber": "2019/SC/CSC/0079"
     },
     {
-     "S/N": 77,
-     "Names": "MATHEW ONARI JOY",
-     "MatricNumber": "2019/SC/CSC/0110"
+        "S/N": 60,
+        "Names": "UMAR ABDULLAHI USMAN",
+        "MatricNumber": "2019/SC/CSC/0080"
     },
     {
-     "S/N": 78,
-     "Names": "JOSEPH GODENAAN JOHN",
-     "MatricNumber": "2019/SC/CSC/0111"
+        "S/N": 61,
+        "Names": "TAIMAKO JULIUS JESSA",
+        "MatricNumber": "2019/SC/CSC/0081"
     },
     {
-     "S/N": 79,
-     "Names": "MOHAMMED MOHAMMED SALEEM",
-     "MatricNumber": "2019/SC/CSC/0112"
+        "S/N": 62,
+        "Names": "ABIMIKU LUCKY LINUS",
+        "MatricNumber": "2019/SC/CSC/0082"
     },
     {
-     "S/N": 80,
-     "Names": "UGWU EMMANUEL UCHECHUKWU",
-     "MatricNumber": "2019/SC/CSC/0114"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0083"
     },
     {
-     "S/N": 81,
-     "Names": "APAI SAMUEL EMMANUEL",
-     "MatricNumber": "2019/SC/CSC/0116"
+        "S/N": 63,
+        "Names": "JAMES VICTOR GLANI",
+        "MatricNumber": "2019/SC/CSC/0084"
     },
     {
-     "S/N": 82,
-     "Names": "MIRACLE AMARACHY EZEH",
-     "MatricNumber": "2019/SC/CSC/0117"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0085"
     },
     {
-     "S/N": 83,
-     "Names": "MUSA IBRAHIM ABDULLAHI",
-     "MatricNumber": "2019/SC/CSC/0118"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0086"
     },
     {
-     "S/N": 84,
-     "Names": "YAKUBU MAZAWAJE",
-     "MatricNumber": "2019/SC/CSC/0119"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0087"
     },
     {
-     "S/N": 85,
-     "Names": "MOHAMMED NAZIF",
-     "MatricNumber": "2019/SC/CSC/0120"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0088"
     },
     {
-     "S/N": 86,
-     "Names": "MERCY TEMIDAYO OLUWOLE",
-     "MatricNumber": "2019/SC/CSC/0123"
+        "S/N": 64,
+        "Names": "LAWRENCE DARWAT DUNG",
+        "MatricNumber": "2019/SC/CSC/0089"
     },
     {
-     "S/N": 87,
-     "Names": "OROWUA SHEDRACK VERSHIMA",
-     "MatricNumber": "2019/SC/CSC/0124"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0090"
     },
     {
-     "S/N": 88,
-     "Names": "ROYAL GREAT ATANU",
-     "MatricNumber": "2019/SC/CSC/0125"
+        "S/N": 65,
+        "Names": "ABDULAZEEZ HASSAN",
+        "MatricNumber": "2019/SC/CSC/0091"
     },
     {
-     "S/N": 89,
-     "Names": "RABIU BABA HADIZA",
-     "MatricNumber": "2019/SC/CSC/0126"
+        "S/N": 66,
+        "Names": "FEDRICK AKOLO AKPE",
+        "MatricNumber": "2019/SC/CSC/0092"
     },
     {
-     "S/N": 90,
-     "Names": "UMAR AHMAD UMAR",
-     "MatricNumber": "2019/SC/CSC/0129"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0093"
     },
     {
-     "S/N": 91,
-     "Names": "USMAN ISA IBRAHIM",
-     "MatricNumber": "2019/SC/CSC/0130"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0094"
     },
     {
-     "S/N": 92,
-     "MatricNumber": "2019/SC/CSC/0131"
+        "S/N": 67,
+        "Names": "HENRY ALIKA",
+        "MatricNumber": "2019/SC/CSC/0095"
     },
     {
-     "S/N": 93,
-     "Names": "OBORO ALBERT OSHEKA",
-     "MatricNumber": "2019/SC/CSC/0133"
+        "S/N": 68,
+        "Names": "AMOS LOVETH",
+        "MatricNumber": "2019/SC/CSC/0096"
     },
     {
-     "S/N": 94,
-     "Names": "SHEHU MOHAMMED BABA",
-     "MatricNumber": "2019/SC/CSC/0134"
+        "S/N": 69,
+        "Names": "APE OGUWCHE MICHAEL",
+        "MatricNumber": "2019/SC/CSC/0097"
     },
     {
-     "S/N": 95,
-     "Names": "TERSUGH SAANMOIYOL JOSHUA",
-     "MatricNumber": "2019/SC/CSC/0135"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0098"
     },
     {
-     "S/N": 96,
-     "Names": "YUSUF DESTINY",
-     "MatricNumber": "2019/SC/CSC/0136"
+        "S/N": 70,
+        "Names": "BITRUS EMMANUEL",
+        "MatricNumber": "2019/SC/CSC/0099"
     },
     {
-     "S/N": 97,
-     "Names": "YUSUF MOSES",
-     "MatricNumber": "2019/SC/CSC/0138"
+        "S/N": 71,
+        "Names": "BITRUS EZRA KATOH",
+        "MatricNumber": "2019/SC/CSC/0100"
     },
     {
-     "S/N": 98,
-     "Names": "ATAH EMMANUEL OJONUGWA",
-     "MatricNumber": "2019/SC/CSC/0139"
+        "S/N": 72,
+        "Names": "FAHAD MUHAMMAD YUSUF",
+        "MatricNumber": "2019/SC/CSC/0101"
     },
     {
-     "S/N": 99,
-     "Names": "AMOS GRACE ASHIZI",
-     "MatricNumber": "2019/SC/CSC/0141"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0102"
     },
     {
-     "S/N": 100,
-     "Names": "OLUSESI BRIDGET OLUWASINA",
-     "MatricNumber": "2019/SC/CSC/0143"
+        "S/N": 73,
+        "Names": "HASSAN BABA ADAMU",
+        "MatricNumber": "2019/SC/CSC/0103"
     },
     {
-     "S/N": 101,
-     "Names": "ADENUGA MATHEW OLUWASEGUN",
-     "MatricNumber": "2019/SC/CSC/0144"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0104"
     },
     {
-     "S/N": 102,
-     "Names": "MICAH TIMOTHY TERKIMBI",
-     "MatricNumber": "2019/SC/CSC/0145"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0105"
     },
     {
-     "S/N": 103,
-     "Names": "ALIYU HASSAN SADAUKI",
-     "MatricNumber": "2019/SC/CSC/0147"
+        "S/N": 74,
+        "Names": "ISA IBRAHIM",
+        "MatricNumber": "2019/SC/CSC/0106"
     },
     {
-     "S/N": 104,
-     "Names": "PETER ATARI GODSWILL",
-     "MatricNumber": "2019/SC/CSC/0149"
+        "S/N": 75,
+        "Names": "ABDULHAKIM YUSUF ISAH",
+        "MatricNumber": "2019/SC/CSC/0107"
     },
     {
-     "S/N": 105,
-     "Names": "SOBIRAT ABIDEMI ABDUSSALAM",
-     "MatricNumber": "2019/SC/CSC/0150"
+        "S/N": 76,
+        "Names": "SALIH ISAH OSABO",
+        "MatricNumber": "2019/SC/CSC/0108"
     },
     {
-     "S/N": 106,
-     "Names": "IBRAHIM ZAINAB SHUAIBU",
-     "MatricNumber": "2019/SC/CSC/0152"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0109"
     },
     {
-     "S/N": 107,
-     "Names": "IDRIS AMINU MUAZU",
-     "MatricNumber": "2019/SC/CSC/00156"
+        "S/N": 77,
+        "Names": "MATHEW ONARI JOY",
+        "MatricNumber": "2019/SC/CSC/0110"
     },
     {
-     "S/N": 108,
-     "Names": "HOSEA EPHRAIM",
-     "MatricNumber": "2020/CP/CSC/0076DE"
+        "S/N": 78,
+        "Names": "JOSEPH GODENAAN JOHN",
+        "MatricNumber": "2019/SC/CSC/0111"
     },
     {
-     "S/N": 109,
-     "Names": "IBEH EMMANUEL CHIMAOBI",
-     "MatricNumber": "2020/CP/CSC/0077DE"
+        "S/N": 79,
+        "Names": "MOHAMMED MOHAMMED SALEEM",
+        "MatricNumber": "2019/SC/CSC/0112"
     },
     {
-     "S/N": 110,
-     "Names": "IBRAHIM MUSTAPHA BASHIR",
-     "MatricNumber": "2020/CP/CSC/0078DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0113"
     },
     {
-     "S/N": 111,
-     "Names": "AUDU ISHAIKU",
-     "MatricNumber": "2020/CP/CSC/0099DE"
+        "S/N": 80,
+        "Names": "UGWU EMMANUEL UCHECHUKWU",
+        "MatricNumber": "2019/SC/CSC/0114"
     },
     {
-     "S/N": 112,
-     "Names": "INNOCENT YOHANNA ANJUGU",
-     "MatricNumber": "2020/CP/CSC/0100DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0115"
     },
     {
-     "S/N": 113,
-     "Names": "ARI SAIFULLAH MUSA",
-     "MatricNumber": "2020/CP/CSC/0101DE"
+        "S/N": 81,
+        "Names": "APAI SAMUEL EMMANUEL",
+        "MatricNumber": "2019/SC/CSC/0116"
     },
     {
-     "S/N": 114,
-     "Names": "DOKO ALICE AGATHA",
-     "MatricNumber": "2020/CP/CSC/0104DE"
+        "S/N": 82,
+        "Names": "MIRACLE AMARACHY EZEH",
+        "MatricNumber": "2019/SC/CSC/0117"
     },
     {
-     "S/N": 115,
-     "Names": "EMMANUEL DIVINE",
-     "MatricNumber": "2020/CP/CSC/0105DE"
+        "S/N": 83,
+        "Names": "MUSA IBRAHIM ABDULLAHI",
+        "MatricNumber": "2019/SC/CSC/0118"
     },
     {
-     "S/N": 116,
-     "Names": "EBA CHRISTIAN OGA",
-     "MatricNumber": "2020/CP/CSC/0106DE"
+        "S/N": 84,
+        "Names": "YAKUBU MAZAWAJE",
+        "MatricNumber": "2019/SC/CSC/0119"
     },
     {
-     "S/N": 117,
-     "Names": "RAPHAEL NATHANIEL ONYEDIKACHI",
-     "MatricNumber": "2020/CP/CSC/0108DE"
+        "S/N": 85,
+        "Names": "MOHAMMED NAZIF",
+        "MatricNumber": "2019/SC/CSC/0120"
     },
     {
-     "S/N": 118,
-     "Names": "MOHAMMAD HADI ALIYU",
-     "MatricNumber": "2020/CP/CSC/0130DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0121"
     },
     {
-     "S/N": 119,
-     "Names": "HUSSAIN MUHAMMED NAZIR",
-     "MatricNumber": "2020/CP/CSC/0133DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0122"
     },
     {
-     "S/N": 120,
-     "Names": "ELOM MAGARET AKPANA",
-     "MatricNumber": "2020/CP/CSC/0134DE"
+        "S/N": 86,
+        "Names": "MERCY TEMIDAYO OLUWOLE",
+        "MatricNumber": "2019/SC/CSC/0123"
     },
     {
-     "S/N": 121,
-     "Names": "MBALAHA WANDOO BEATRICE",
-     "MatricNumber": "2020/CP/CSC/0135DE"
+        "S/N": 87,
+        "Names": "OROWUA SHEDRACK VERSHIMA",
+        "MatricNumber": "2019/SC/CSC/0124"
     },
     {
-     "S/N": 122,
-     "Names": "KUBURAT OGAPA DAUDA",
-     "MatricNumber": "2020/CP/CSC/0139DE"
+        "S/N": 88,
+        "Names": "ROYAL GREAT ATANU",
+        "MatricNumber": "2019/SC/CSC/0125"
     },
     {
-     "S/N": 123,
-     "Names": "HALIMA MUHAMMED MUSA",
-     "MatricNumber": "2020/CP/CSC/0141DE"
+        "S/N": 89,
+        "Names": "RABIU BABA HADIZA",
+        "MatricNumber": "2019/SC/CSC/0126"
     },
     {
-     "S/N": 124,
-     "Names": "AHMED ABDULLAHI NBAKO",
-     "MatricNumber": "2020/CP/CSC/0142DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0127"
     },
     {
-     "S/N": 125,
-     "Names": "ABUBAKAR HABIZA IBRAHIM",
-     "MatricNumber": "2020/CP/CSC/0143DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0128"
     },
     {
-     "S/N": 126,
-     "Names": "OSABO JOHN OGAH",
-     "MatricNumber": "2020/CP/CSC/0144DE"
+        "S/N": 90,
+        "Names": "UMAR AHMAD UMAR",
+        "MatricNumber": "2019/SC/CSC/0129"
     },
     {
-     "S/N": 127,
-     "Names": "UCHE DIVINE OZUCHUKWU",
-     "MatricNumber": "2020/CP/CSC/0145DE"
+        "S/N": 91,
+        "Names": "USMAN ISA IBRAHIM",
+        "MatricNumber": "2019/SC/CSC/0130"
     },
     {
-     "S/N": 128,
-     "Names": "ESTHER ADOLE",
-     "MatricNumber": "2020/CP/CSC/0146DE"
+        "S/N": 92,
+        "MatricNumber": "2019/SC/CSC/0131"
     },
     {
-     "S/N": 129,
-     "Names": "NWOKOMA PHILIP CHIMUANYA",
-     "MatricNumber": "2020/CP/CSC/0149DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0132"
     },
     {
-     "S/N": 130,
-     "Names": "ERIC JIBRILLA",
-     "MatricNumber": "2020/CP/CSC/0165DE"
+        "S/N": 93,
+        "Names": "OBORO ALBERT OSHEKA",
+        "MatricNumber": "2019/SC/CSC/0133"
     },
     {
-     "S/N": 131,
-     "Names": "MUHAMMAD ALIYU DALHAT",
-     "MatricNumber": "2020/CP/CSC/0165DE"
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0133"
     },
     {
-     "S/N": 132,
-     "Names": "MUHAMMAD ISHAQ DAUDA",
-     "MatricNumber": "2020/CP/CSC/0175DE"
+        "S/N": 94,
+        "Names": "SHEHU MOHAMMED BABA",
+        "MatricNumber": "2019/SC/CSC/0134"
     },
     {
-     "S/N": 133,
-     "Names": "ADEKANMI ADEDOLAPO RECHAEL",
-     "MatricNumber": "2020/CP/CSC/0167DE"
+        "S/N": 95,
+        "Names": "TERSUGH SAANMOIYOL JOSHUA",
+        "MatricNumber": "2019/SC/CSC/0135"
+    },
+    {
+        "S/N": 96,
+        "Names": "YUSUF DESTINY",
+        "MatricNumber": "2019/SC/CSC/0136"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0137"
+    },
+    {
+        "S/N": 97,
+        "Names": "YUSUF MOSES",
+        "MatricNumber": "2019/SC/CSC/0138"
+    },
+    {
+        "S/N": 98,
+        "Names": "ATAH EMMANUEL OJONUGWA",
+        "MatricNumber": "2019/SC/CSC/0139"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0140"
+    },
+    {
+        "S/N": 99,
+        "Names": "AMOS GRACE ASHIZI",
+        "MatricNumber": "2019/SC/CSC/0141"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0142"
+    },
+    {
+        "S/N": 100,
+        "Names": "OLUSESI BRIDGET OLUWASINA",
+        "MatricNumber": "2019/SC/CSC/0143"
+    },
+    {
+        "S/N": 101,
+        "Names": "ADENUGA MATHEW OLUWASEGUN",
+        "MatricNumber": "2019/SC/CSC/0144"
+    },
+    {
+        "S/N": 102,
+        "Names": "MICAH TIMOTHY TERKIMBI",
+        "MatricNumber": "2019/SC/CSC/0145"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0146"
+    },
+    {
+        "S/N": 103,
+        "Names": "ALIYU HASSAN SADAUKI",
+        "MatricNumber": "2019/SC/CSC/0147"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0148"
+    },
+    {
+        "S/N": 104,
+        "Names": "PETER ATARI GODSWILL",
+        "MatricNumber": "2019/SC/CSC/0149"
+    },
+    {
+        "S/N": 105,
+        "Names": "SOBIRAT ABIDEMI ABDUSSALAM",
+        "MatricNumber": "2019/SC/CSC/0150"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0151"
+    },
+    {
+        "S/N": 106,
+        "Names": "IBRAHIM ZAINAB SHUAIBU",
+        "MatricNumber": "2019/SC/CSC/0152"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0153"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0154"
+    },
+    {
+        "S/N": 43,
+        "Names": "JONAS VICTOR OGONKACHA",
+        "MatricNumber": "2019/SC/CSC/0155"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0156"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0157"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0157"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0158"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0159"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0160"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0161"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0162"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0163"
+    },
+    {
+        "S/N": 107,
+        "Names": "IDRIS AMINU MUAZU",
+        "MatricNumber": "2019/SC/CSC/0164"
+    },
+    {
+        "S/N": 108,
+        "Names": "HOSEA EPHRAIM",
+        "MatricNumber": "2020/CP/CSC/0076DE"
+    },
+    {
+        "S/N": 109,
+        "Names": "IBEH EMMANUEL CHIMAOBI",
+        "MatricNumber": "2020/CP/CSC/0077DE"
+    },
+    {
+        "S/N": 110,
+        "Names": "IBRAHIM MUSTAPHA BASHIR",
+        "MatricNumber": "2020/CP/CSC/0078DE"
+    },
+    {
+        "S/N": 111,
+        "Names": "AUDU ISHAIKU",
+        "MatricNumber": "2020/CP/CSC/0099DE"
+    },
+    {
+        "S/N": 112,
+        "Names": "INNOCENT YOHANNA ANJUGU",
+        "MatricNumber": "2020/CP/CSC/0100DE"
+    },
+    {
+        "S/N": 113,
+        "Names": "ARI SAIFULLAH MUSA",
+        "MatricNumber": "2020/CP/CSC/0101DE"
+    },
+    {
+        "S/N": 114,
+        "Names": "DOKO ALICE AGATHA",
+        "MatricNumber": "2020/CP/CSC/0104DE"
+    },
+    {
+        "S/N": 115,
+        "Names": "EMMANUEL DIVINE",
+        "MatricNumber": "2020/CP/CSC/0105DE"
+    },
+    {
+        "S/N": 116,
+        "Names": "EBA CHRISTIAN OGA",
+        "MatricNumber": "2020/CP/CSC/0106DE"
+    },
+    {
+        "S/N": 117,
+        "Names": "RAPHAEL NATHANIEL ONYEDIKACHI",
+        "MatricNumber": "2020/CP/CSC/0108DE"
+    },
+    {
+        "S/N": 118,
+        "Names": "MOHAMMAD HADI ALIYU",
+        "MatricNumber": "2020/CP/CSC/0130DE"
+    },
+    {
+        "S/N": 119,
+        "Names": "HUSSAIN MUHAMMED NAZIR",
+        "MatricNumber": "2020/CP/CSC/0133DE"
+    },
+    {
+        "S/N": 120,
+        "Names": "ELOM MAGARET AKPANA",
+        "MatricNumber": "2020/CP/CSC/0134DE"
+    },
+    {
+        "S/N": 121,
+        "Names": "MBALAHA WANDOO BEATRICE",
+        "MatricNumber": "2020/CP/CSC/0135DE"
+    },
+    {
+        "S/N": 122,
+        "Names": "KUBURAT OGAPA DAUDA",
+        "MatricNumber": "2020/CP/CSC/0139DE"
+    },
+    {
+        "S/N": 123,
+        "Names": "HALIMA MUHAMMED MUSA",
+        "MatricNumber": "2020/CP/CSC/0141DE"
+    },
+    {
+        "S/N": 124,
+        "Names": "AHMED ABDULLAHI NBAKO",
+        "MatricNumber": "2020/CP/CSC/0142DE"
+    },
+    {
+        "S/N": 125,
+        "Names": "ABUBAKAR HABIZA IBRAHIM",
+        "MatricNumber": "2020/CP/CSC/0143DE"
+    },
+    {
+        "S/N": 126,
+        "Names": "OSABO JOHN OGAH",
+        "MatricNumber": "2020/CP/CSC/0144DE"
+    },
+    {
+        "S/N": 127,
+        "Names": "UCHE DIVINE OZUCHUKWU",
+        "MatricNumber": "2020/CP/CSC/0145DE"
+    },
+    {
+        "S/N": 128,
+        "Names": "ESTHER ADOLE",
+        "MatricNumber": "2020/CP/CSC/0146DE"
+    },
+    {
+        "S/N": 129,
+        "Names": "NWOKOMA PHILIP CHIMUANYA",
+        "MatricNumber": "2020/CP/CSC/0149DE"
+    },
+    {
+        "S/N": 130,
+        "Names": "ERIC JIBRILLA",
+        "MatricNumber": "2020/SC/CSC/0165"
+    },
+    {
+        "S/N": 131,
+        "Names": "MUHAMMAD ALIYU DALHAT",
+        "MatricNumber": "2020/CP/CSC/0165DE"
+    },
+    {
+        "S/N": 132,
+        "Names": "MUHAMMAD ISHAQ DAUDA",
+        "MatricNumber": "2020/CP/CSC/0175DE"
+    },
+    {
+        "S/N": 133,
+        "Names": "ADEKANMI ADEDOLAPO RECHAEL",
+        "MatricNumber": "2020/CP/CSC/0167DE"
     }
-   ]
+]
