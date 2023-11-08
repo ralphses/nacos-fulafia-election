@@ -24,6 +24,11 @@
                        <p style="font-size: xxx-large" class="text-white"> Elections Commencing Soon!</p>
                 </div>
             @endif
+            <div>
+                <a class="btn text-white px-3 py-2 m-1" style="background-color: #198906;" href="{{ route('election.guide') }}">
+                    Election Guidelines
+                </a>
+            </div>
         </div>
 
     </div>
