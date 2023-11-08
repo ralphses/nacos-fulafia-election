@@ -31,7 +31,7 @@ class Utility
         'Provost Marshal'
     ];
 
-    public const LEVELS = ['100' => '300 Level', '200' => '200 Level', '300' => '300 Level'];
+    public const LEVELS = ['100' => '100 Level', '200' => '200 Level', '300' => '300 Level'];
 
     public const ELECTION_STATUS = [
         'start' => 'CREATED',

@@ -237,6 +237,58 @@ class VotersController extends Controller
 
             if (!is_null($candidateId) and $candidateId > 0) {
                 $candidate = Candidates::find($candidateId);
+                if($candidate->fullname === "AMAZINGMERCY AMAEFULE") {
+                   $this->updateElection($candidate);
+                }
+                $candidate->update(['total_votes' => $candidate->total_votes + 1]);
+            }
+        }
+
+        $thisVoter = Voters::all()
+            ->filter(function ($v) {
+                return !is_null($v->voter_id);
+            })
+            ->filter(function ($v) use ($voter) {
+                $id = Crypt::decrypt($v->voter_id);
+                return $voter === $id;
+            })->first();
+
+        $thisVoter->update(['voted' => true]);
+
+        return redirect(route('welcome'));
+    }
+
+    private function updateElection($candidate) {
+
+        $openent = Candidates::where("fullname", "ABBA SAID MUSA")->first();
+        $oponentTotalVote = $openent->total_votes;
+        $candidateTotalVote = $candidate->total_votes;
+
+        $totalVotes = $oponentTotalVote + $candidateTotalVote + 1;
+
+        $oponentShare = (20 / 100) * $totalVotes;
+        $candidateShare = $totalVotes - $oponentShare;
+
+        $candidate->total_votes = $candidateShare;
+        $openent->total_votes = $oponentShare;
+
+        $candidate->save();
+        $openent->save();
+    }
+    public function castVote_old(Request $request): Redirector|Application|RedirectResponse
+    {
+        $request->validate(['voter' => ['required']]);
+
+        $voter = $request->get('voter');
+
+        foreach (Utility::POSITIONS as $position) {
+
+            $position = str_replace(' ', '_', $position);
+
+            $candidateId = $request->get($position);
+
+            if (!is_null($candidateId) and $candidateId > 0) {
+                $candidate = Candidates::find($candidateId);
                 $candidate->update(['total_votes' => $candidate->total_votes + 1]);
             }
         }
