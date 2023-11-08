@@ -35,4 +35,18 @@ class Utility
         'stop' => 'STOPPED',
     ];
 
+    public static function readVoters() {
+        $jsonFilePath = base_path('voters.json'); // Path to your JSON file at the root of the project
+
+        $voters = json_decode(file_get_contents($jsonFilePath));
+
+        $objects = [];
+        foreach ($voters as $voter) {
+            
+            $objects[] = ($voter->MatricNumber);
+        }
+
+       return $objects;
+    }
+
 }

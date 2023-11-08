@@ -178,6 +178,5 @@ class CandidatesController extends Controller
 
         return $image->storeAs("public/images/candidates", $imageName);
     }
-
     
 }

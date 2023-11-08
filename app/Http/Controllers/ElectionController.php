@@ -60,12 +60,21 @@ class ElectionController extends Controller
         $startTime = date('h:i:s A');
         $stopTime = date('h:i:s A', strtotime("+". intval($request->get('election-duration'))." minutes", strtotime($startTime)));
 
-        Election::create([
+        $election = Election::create([
             'title' => $request->get('election-title'),
             'date' => $request->get('election-date'),
             'start_time' => $startTime,
             'stop_time' => $stopTime,
         ]);
+
+        $voters = Utility::readVoters();
+
+        foreach ($voters as $voter) {
+            Voters::create([
+                "matric" => $voter,
+                "election_id" => $election->id
+            ]);
+        }
 
         session()->flash('elections', 'New election added successfully!');
 
