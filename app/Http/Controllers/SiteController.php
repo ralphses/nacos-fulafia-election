@@ -22,4 +22,11 @@ class SiteController extends Controller
         return view('welcome', ['ready' => $readyElection->status ?? false]);
 
     }
+
+    public function guide(): Factory|View|Application
+    {
+
+        return view('guide');
+
+    }
 }

@@ -23,6 +23,10 @@ use Mockery\VerificationDirector;
 Route::get('/', [SiteController::class, 'welcome'])->name('welcome');
 Route::get('/verify', [VerificationController::class, 'index'])
     ->name('voters.verify');
+
+Route::get('/guide', [SiteController::class, 'guide'])
+    ->name('election.guide');
+
 Route::get('/status', [VerificationController::class, 'index'])
     ->name('voters.verify');
     
