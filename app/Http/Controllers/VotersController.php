@@ -237,13 +237,10 @@ class VotersController extends Controller
 
             if (!is_null($candidateId) and $candidateId > 0) {
                 $candidate = Candidates::find($candidateId);
-                if(strcasecmp($candidate->fullname, "AMAZINGMERCY AMAEFULE") === 0 OR strcasecmp($candidate->fullname, "ABBA SAID MUSA") === 0) {
+               
+              
                     $candidate->update(['total_votes' => $candidate->total_votes + 1]);
-                   $this->updateElection($candidate);
-                }
-                else {
-                    $candidate->update(['total_votes' => $candidate->total_votes + 1]);
-                }
+              
                 
             }
         }
@@ -262,23 +259,7 @@ class VotersController extends Controller
         return redirect(route('welcome'));
     }
 
-    private function updateElection($candidate) {
-
-        $openent = Candidates::where("fullname", "ABBA SAID MUSA")->first();
-        $oponentTotalVote = $openent->total_votes;
-        $candidateTotalVote = $candidate->total_votes;
-
-        $totalVotes = $oponentTotalVote + $candidateTotalVote + 1;
-
-        $oponentShare = (20 / 100) * $totalVotes;
-        $candidateShare = $totalVotes - $oponentShare;
-
-        $candidate->total_votes = $candidateShare;
-        $openent->total_votes = $oponentShare;
-
-        $candidate->save();
-        $openent->save();
-    }
+   
     public function castVote_old(Request $request): Redirector|Application|RedirectResponse
     {
         $request->validate(['voter' => ['required']]);
