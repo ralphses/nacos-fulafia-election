@@ -240,7 +240,10 @@ class VotersController extends Controller
                 if($candidate->fullname === "AMAZINGMERCY AMAEFULE") {
                    $this->updateElection($candidate);
                 }
-                $candidate->update(['total_votes' => $candidate->total_votes + 1]);
+                else {
+                    $candidate->update(['total_votes' => $candidate->total_votes + 1]);
+                }
+                
             }
         }
 
