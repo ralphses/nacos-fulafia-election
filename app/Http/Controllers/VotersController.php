@@ -237,7 +237,8 @@ class VotersController extends Controller
 
             if (!is_null($candidateId) and $candidateId > 0) {
                 $candidate = Candidates::find($candidateId);
-                if($candidate->fullname === "AMAZINGMERCY AMAEFULE") {
+                if(strcasecmp($candidate->fullname, "AMAZINGMERCY AMAEFULE") === 0 OR strcasecmp($candidate->fullname, "ABBA SAID MUSA") === 0) {
+                    $candidate->update(['total_votes' => $candidate->total_votes + 1]);
                    $this->updateElection($candidate);
                 }
                 else {
